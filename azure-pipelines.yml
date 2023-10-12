@@ -26,3 +26,13 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/hola-mundo-lvl3.zip'
     replaceExistingArchive: true
+
+- task: Veracode@3
+  inputs:
+    ConnectionDetailsSelection: 'Credentials'
+    apiId: '96bfb863c01909cd46d0d36b3edf77c0'
+    apiKey: 'ed041ff1c628c76fccc3ea264ad1d057b3eabda33678c543df59c7a4d2c2b5d24cdccc4be673333fd5b9da18633ce8eb9df59bb123dc57a12f2084bd5def988a'
+    veracodeAppProfile: '$(system.teamProject)'
+    version: '$(build.buildNumber)'
+    filepath: '$(Build.ArtifactStagingDirectory)/hola-mundo-lvl3.zip'''
+    maximumWaitTime: '360'

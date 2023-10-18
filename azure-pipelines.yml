@@ -37,4 +37,7 @@ steps:
     veracodeAppProfile: 'Veracode-Level3-demo'
     version: '$(build.buildNumber)'
     filepath: '$(Build.ArtifactStagingDirectory)/hola-mundo-lvl3.zip'''
+    createProfile: true
+    failBuildOnPolicyFail: true
     maximumWaitTime: '360'
+
